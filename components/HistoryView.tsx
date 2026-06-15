@@ -70,7 +70,7 @@ export default function HistoryView({ logs }: Props) {
             <YAxis tick={{ fontSize: 11, fill: "#9ca3af" }} axisLine={false} tickLine={false} />
             <Tooltip
               contentStyle={{ borderRadius: 12, border: "1px solid #e5e7eb", fontSize: 12 }}
-              formatter={(v: number) => [`${v} kg CO₂e`, "Carbon"]}
+              formatter={(v) => [`${v ?? 0} kg CO₂e`, "Carbon"]}
             />
             <ReferenceLine y={2.5} stroke="#22c55e" strokeDasharray="4 4" />
             <Area type="monotone" dataKey="carbon" stroke="#22c55e" fill="url(#carbonGrad)" strokeWidth={2} />
